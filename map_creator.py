@@ -8,9 +8,6 @@ input_file_map_radar_inside = 'dist/map_radar_inside.tmj'
 input_file_map_spaceship = 'dist/map_spaceship.tmj'
 input_file_map_moon = 'dist/map_moon.tmj'
 
-
-
-
 output_folder="."
 map_count=84
 

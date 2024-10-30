@@ -26,6 +26,9 @@ jobs:
       - name: "Build scripts"
         run: npm run build
 
+      - name: "Python duplicate maps"
+        run: "python map_creator.py"
+
       - name: Get API key from secrets
         env:
           MAP_STORAGE_API_KEY: ${{ secrets.MAP_STORAGE_API_KEY }}
