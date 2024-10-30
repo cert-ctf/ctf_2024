@@ -5,6 +5,11 @@ input_file_map_flat = 'dist/map_flat.tmj'
 input_file_map_city = 'dist/map_city.tmj'
 input_file_map_radar = 'dist/map_radar.tmj'
 input_file_map_radar_inside = 'dist/map_radar_inside.tmj'
+input_file_map_spaceship = 'dist/map_spaceship.tmj'
+input_file_map_moon = 'dist/map_moon.tmj'
+
+
+
 
 output_folder="."
 map_count=84
@@ -32,6 +37,8 @@ file_map_flat = read_map(input_file_map_flat)
 file_map_city = read_map(input_file_map_city)
 file_map_radar = read_map(input_file_map_radar)
 file_map_radar_inside = read_map(input_file_map_radar_inside)
+file_map_spaceship = read_map(input_file_map_spaceship)
+file_map_map_moon= read_map(input_file_map_moon)
 
 #Erstelle Output Ordner
 if not os.path.exists(output_folder):
@@ -39,15 +46,15 @@ if not os.path.exists(output_folder):
 
 for i in range(1,map_count+1):
     #Ersetze Strings in Maps
-    modified_map_flat = file_map_flat.replace("map_city.tmj", "https://play.workadventu.re/@/gematik/kim_ti/team_"+str(i).zfill(2)+"_city")
+    modified_map_flat = file_map_flat.replace("map_city.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_city")
 
-    modified_data_map_city = file_map_city.replace("map_radar.tmj", "https://play.workadventu.re/@/gematik/kim_ti/team_"+str(i).zfill(2)+"_radar")
-    modified_data_map_city = modified_data_map_city.replace("map_flat.tmj", "https://play.workadventu.re/@/gematik/kim_ti/team_"+str(i).zfill(2)+"_flat")
+    modified_data_map_city = file_map_city.replace("map_radar.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_radar")
+    modified_data_map_city = modified_data_map_city.replace("map_flat.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_flat")
 
-    modified_data_map_radar = file_map_radar.replace("map_radar_inside.tmj", "https://play.workadventu.re/@/gematik/kim_ti/team_"+str(i).zfill(2)+"_radar_inside")
-    modified_data_map_radar = modified_data_map_radar.replace("map_city.tmj", "https://play.workadventu.re/@/gematik/kim_ti/team_"+str(i).zfill(2)+"_city")
+    modified_data_map_radar = file_map_radar.replace("map_radar_inside.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_radar_inside")
+    modified_data_map_radar = modified_data_map_radar.replace("map_city.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_city")
 
-    modified_data_map_radar_inside = file_map_radar_inside.replace("map_radar.tmj", "https://play.workadventu.re/@/gematik/kim_ti/team_"+str(i).zfill(2)+"_radar")
+    modified_data_map_radar_inside = file_map_radar_inside.replace("map_radar.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_radar")
 
     #Schreibe neue Datei
     write_map(output_folder+"/"+input_file_map_flat.replace(".tmj","")+"_"+str(i).zfill(2)+".tmj",modified_map_flat)
