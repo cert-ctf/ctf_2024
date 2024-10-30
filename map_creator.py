@@ -44,7 +44,7 @@ if not os.path.exists(output_folder):
 for i in range(1,map_count+1):
     #Ersetze Strings in Maps
     modified_map_flat = file_map_flat.replace("map_city.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_city")
-    modified_map_flat = file_map_flat.replace("map_city.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_spaceship")
+    modified_map_flat = file_map_flat.replace("map_spaceship.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_spaceship")
 
     modified_data_map_city = file_map_city.replace("map_radar.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_radar")
     modified_data_map_city = modified_data_map_city.replace("map_flat.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_flat")

@@ -567,31 +567,21 @@
          "name":"floorLayer",
          "objects":[
                 {
-                 "height":438.667,
-                 "id":28,
-                 "name":"music_lechuck",
+                 "height":32,
+                 "id":39,
+                 "name":"Cyberchef",
                  "properties":[
                         {
-                         "name":"#audioVolume",
+                         "name":"openWebsite",
                          "type":"string",
-                         "value":"1"
-                        }, 
-                        {
-                         "name":"audioLoop",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":"lechuck.mp3"
+                         "value":"websites\/sxop00dhsd.html"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":1193.33,
-                 "x":32.335,
-                 "y":132.5415
+                 "width":93.25,
+                 "x":64,
+                 "y":352
                 }],
          "opacity":1,
          "properties":[
@@ -796,7 +786,7 @@
          "y":0
         }],
  "nextlayerid":77,
- "nextobjectid":39,
+ "nextobjectid":40,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -825,7 +815,7 @@
          "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.10.2",
+ "tiledversion":"1.11.0",
  "tileheight":32,
  "tilesets":[
         {
