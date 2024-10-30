@@ -35,7 +35,7 @@ file_map_city = read_map(input_file_map_city)
 file_map_radar = read_map(input_file_map_radar)
 file_map_radar_inside = read_map(input_file_map_radar_inside)
 file_map_spaceship = read_map(input_file_map_spaceship)
-file_map_map_moon= read_map(input_file_map_moon)
+file_map_moon= read_map(input_file_map_moon)
 
 #Erstelle Output Ordner
 if not os.path.exists(output_folder):
@@ -57,7 +57,7 @@ for i in range(1,map_count+1):
     modified_data_map_spaceship = file_map_spaceship.replace("map_flat.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_flat")
     modified_data_map_spaceship = modified_data_map_spaceship.replace("map_moon.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_moon")
 
-    modified_data_map_moon = file_map_spaceship.replace("map_moon.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_spaceship")
+    modified_data_map_moon = file_map_moon.replace("map_moon.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_spaceship")
 
     #Schreibe neue Datei
     write_map(output_folder+"/"+input_file_map_flat.replace(".tmj","")+"_"+str(i).zfill(2)+".tmj",modified_map_flat)
