@@ -20,4 +20,8 @@ h1,h2,h3,h5 {
 	margin-bottom: 0!important;
 }
 
+.card-body {
+	padding-bottom: 0px; /* Verringere den oberen Abstand */
+}
+
 	

@@ -18,19 +18,21 @@
             }
             const instanceId = Math.random().toString(36).substring(2, 15);
             const url_map = `https://play.workadventu.re/_/${instanceId}/${host}${path}map.tmj`;
-			const url_flat = `https://play.workadventu.re/_/${instanceId}/${host}${path}map_flat.tmj`;
 			const url_city = `https://play.workadventu.re/_/${instanceId}/${host}${path}map_city.tmj`;
 			const url_radar = `https://play.workadventu.re/_/${instanceId}/${host}${path}map_radar.tmj`;
 			const url_radarinside = `https://play.workadventu.re/_/${instanceId}/${host}${path}map_radar_inside.tmj`;
+			const url_spaceship = `https://play.workadventu.re/_/${instanceId}/${host}${path}map_spaceship.tmj`;
+			const url_moon = `https://play.workadventu.re/_/${instanceId}/${host}${path}map_moon.tmj`;
 			
             document.getElementById('testMapURL').href = url_map;
             document.getElementById('testMapBtnURL').href = url_map;
             document.getElementById('testMapURL').innerText = url_map;
 			
-			document.getElementById('testMapBtnURLFlat').href = url_flat;
 			document.getElementById('testMapBtnURLCity').href = url_city;
 			document.getElementById('testMapBtnURLRadar').href = url_radar;
 			document.getElementById('testMapBtnURLRadarInside').href = url_radarinside;
+			document.getElementById('testMapBtnURLSpaceship').href = url_spaceship;
+			document.getElementById('testMapBtnURLMoon').href = url_moon;
 
             const tmjURL = window.location.protocol + '//' + window.location.host + path + 'map.tmj';
             document.getElementById('tmjURL').innerText = tmjURL;
@@ -163,10 +165,11 @@
                 <p class="tips">(In order to test another map, locate "map.tmj" at the end of the URL and replace it by another file name)</p>
                 <img src="/map.png" alt="Map thumbnail" class="map">
                 <p><a id="testMapBtnURL" href="#" class="button">MAP</a>
-				<a id="testMapBtnURLFlat" href="#" class="button">FLAT</a>
 				<a id="testMapBtnURLCity" href="#" class="button">CITY</a>
 				<a id="testMapBtnURLRadar" href="#" class="button">RADAR</a>
 				<a id="testMapBtnURLRadarInside" href="#" class="button">RADAR INSIDE</a></p>
+				<a id="testMapBtnURLSpaceship" href="#" class="button">Spaceship</a></p>
+				<a id="testMapBtnURLMoon" href="#" class="button">Moon</a></p>
             </section>
 
             <section>

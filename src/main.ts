@@ -9,7 +9,6 @@ let currentPopup: any = undefined;
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     console.log('Scripting API ready');
-    console.log('Player tags: ',WA.player.tags)
 	
 	// Mirror show Duke
 	WA.room.area.onEnter('Mirror_Duke').subscribe(() => {		
@@ -22,6 +21,32 @@ WA.onInit().then(() => {
 	
 	
 	//Roofs------------------------------------------------------------------------
+	
+	// Moon Room
+	WA.room.area.onEnter('moon_inside').subscribe(() => {
+		WA.room.showLayer("above_inside/above_inside_1");		
+		WA.room.showLayer("stuff_inside/stuff_inside_1");		
+		WA.room.showLayer("stuff_inside/stuff_inside_2");		
+		WA.room.showLayer("world/station_inside");		
+				
+		WA.room.hideLayer("above_outside/above_roof_1");	
+		WA.room.hideLayer("above_outside/above_roof_2");			
+		WA.room.hideLayer("stuff_outside/stuff_outside_1");		
+		WA.room.hideLayer("world/station");	
+	})
+	
+	WA.room.area.onEnter('moon_outside').subscribe(() => {
+		WA.room.hideLayer("above_inside/above_inside_1");		
+		WA.room.hideLayer("stuff_inside/stuff_inside_1");		
+		WA.room.hideLayer("stuff_inside/stuff_inside_2");		
+		WA.room.hideLayer("world/station_inside");	
+		
+		WA.room.showLayer("above_outside/above_roof_1");	
+		WA.room.showLayer("above_outside/above_roof_2");			
+		WA.room.showLayer("stuff_outside/stuff_outside_1");	
+		WA.room.showLayer("world/station");	
+	})
+	
 
 	// HiFi Room
 	WA.room.area.onEnter('HiFi_Room').subscribe(() => {
@@ -68,91 +93,81 @@ WA.onInit().then(() => {
 		WA.room.showLayer("Bus_Station_Roof");		
 	}) 
 	
-	
-	//SPAWN TIM------------------------------------------------------------------------
-	// Tim CarCinema
-	WA.room.area.onEnter('tim_01').subscribe(() => {	
-		WA.room.setTiles([		
-		  { x: 76, y: 12, tile: "tim", layer: "Stuff_6" },
-		  { x: 76, y: 11, tile: "tim_info_01a", layer: "Above_1" },
-		  { x: 76, y: 12, tile: "tim_info_01b", layer: "Above_1" },		  
-		]);	
-	})
-	
-	WA.room.area.onLeave('tim_01').subscribe(() => {
-		WA.room.setTiles([		
-		  { x: 76, y: 12, tile: null, layer: "Stuff_6" },
-		  { x: 76, y: 11, tile: null, layer: "Above_1" },
-		  { x: 76, y: 12, tile: null, layer: "Above_1" },		  
-		]);	
-	}) 
-	
-	// Tim Bridge
-	WA.room.area.onEnter('tim_02').subscribe(() => {
-		WA.room.setTiles([		
-		  { x: 70, y: 60, tile: "tim", layer: "Stuff_6" },
-		  { x: 70, y: 59, tile: "tim_info_01a", layer: "Above_1" },
-		  { x: 70, y: 60, tile: "tim_info_01b", layer: "Above_1" },		  
-		]);	
-	})
-	
-	WA.room.area.onLeave('tim_02').subscribe(() => {
-		WA.room.setTiles([		
-		  { x: 70, y: 60, tile: null, layer: "Stuff_6" },
-		  { x: 70, y: 60, tile: null, layer: "Above_1" },
-		  { x: 70, y: 59, tile: null, layer: "Above_1" },		 	  
-		]);	
-	}) 
-	
-	// Tim Bus
-	WA.room.area.onEnter('tim_bus_station').subscribe(() => {
-		WA.room.setTiles([		
-		  { x: 18, y: 71, tile: "tim_2", layer: "Stuff_6" },
-		  { x: 18, y: 70, tile: "tim_info_01a", layer: "Above_1" },
-		  { x: 18, y: 71, tile: "tim_info_01b", layer: "Above_1" },		  
-		]);	
-	})
-	
-	WA.room.area.onLeave('tim_bus_station').subscribe(() => {
-		WA.room.setTiles([		
-		  { x: 18, y: 71, tile: null, layer: "Stuff_6" },
-		  { x: 18, y: 71, tile: null, layer: "Above_1" },
-		  { x: 18, y: 70, tile: null, layer: "Above_1" },		 	  
-		]);	
-	}) 
-	
-	
+		
 	//POPUPS---------------------------------------------------------------------------
-
-	//Popup Flat TV
-	WA.room.area.onEnter('flat_tv').subscribe(() => {
-        currentPopup = WA.ui.openPopup("Popup_flat_tv","Rezepte auf allen Kanälen?!",[{
+	// Popup Radar Station 1
+	WA.room.area.onEnter('area_radar_inside_1').subscribe(() => {
+		console.log("!")
+		currentPopup = WA.ui.openPopup("popup_radar_inside_1", "Was war das für ein Knall?!", [{
 			label: "Next",
 			className: "primary",
 			callback: () => {
 				// Close the popup when the "Close" button is pressed.
 				closePopup();
-				currentPopup = WA.ui.openPopup("Popup_flat_tv","Ich sollte mal prüfen was hier vor sich geht...",[{
+				currentPopup = WA.ui.openPopup("popup_radar_inside_1", "Die Tür hat sich auch automatisch geschlossen, was geht hier vor?", [{
 					label: "Next",
 					className: "primary",
 					callback: () => {
 						// Close the popup when the "Close" button is pressed.
 						closePopup();
-						currentPopup = WA.ui.openPopup("Popup_flat_tv","Eventuell finde ich Online weitere Info's",[{
-							label: "Close",
+						currentPopup = WA.ui.openPopup("popup_radar_inside_1", "Wir sollten prüfen was hier vor sich geht...", [{
+							label: "Next",
 							className: "primary",
 							callback: () => {
 								// Close the popup when the "Close" button is pressed.
 								closePopup();
-								
+								currentPopup = WA.ui.openPopup("popup_radar_inside_1", "Eventuell hat die Außenkamera eine Aufzeichnung erstellt...", [{
+									label: "Close",
+									className: "primary",
+									callback: () => {
+										// Close the popup when the "Close" button is pressed.
+										closePopup();
+									}
+								}]);
 							}
 						}]);
 					}
-				}]);						
+				}]);
 			}
 		}]);
+	});
+    WA.room.area.onLeave('area_radar_inside_1').subscribe(closePopup)
+
+	// Popup Arztpraxis
+	WA.room.area.onEnter('area_praxis').subscribe(() => {
+		console.log("!")
+		currentPopup = WA.ui.openPopup("popup_praxis", "Gut, dass du da bist, wir haben für dich das Fax stehenlassen.", [{
+			label: "Next",
+			className: "primary",
+			callback: () => {
+				// Close the popup when the "Close" button is pressed.
+				closePopup();
+				currentPopup = WA.ui.openPopup("popup_praxis", "Vielleicht findest du Hinweise auf den Übeltäter", [{
+					label: "Next",
+					className: "primary",
+					callback: () => {
+						// Close the popup when the "Close" button is pressed.
+						closePopup();
+						currentPopup = WA.ui.openPopup("popup_praxis", "Wir verwenden jetzt KIM und den TI-Messenger für sichere Kommunikation im Medizinwesen", [{
+							label: "Close",
+							className: "primary",
+							callback: () => {
+								// Close the popup when the "Close" button is pressed.
+								closePopup();								
+							}
+						}]);
+					}
+				}]);
+			}
+		}]);
+	});
+	WA.room.area.onLeave('area_praxis').subscribe(closePopup)
+
+	//Popup VirtualCare
+	WA.room.area.onEnter('area_virtualcare').subscribe(() => {
+        currentPopup = WA.ui.openPopup("popup_virtualcare_1","Praxis geschlossen: Urlaub",[]);			
     })
-    WA.room.area.onLeave('flat_tv').subscribe(closePopup)
+    WA.room.area.onLeave('area_virtualcare').subscribe(closePopup)
 
 	
 	//Popup People 
@@ -176,65 +191,14 @@ WA.onInit().then(() => {
     })
     WA.room.area.onLeave('people_info_04').subscribe(closePopup)
 	
-	//Popup Tim Hifi
-	WA.room.area.onEnter('tim_cinema').subscribe(() => {
-        currentPopup = WA.ui.openPopup("Popup_tim_cinema","⚠️📠🐶🖥️⚠️",[{
-			label: "Next",
-			className: "primary",
-			callback: () => {
-				// Close the popup when the "Close" button is pressed.
-				closePopup();
-				currentPopup = WA.ui.openPopup("Popup_tim_cinema","Der Hund möchte mir irgendetwas mitteilen, aber seine Sprache scheint chiffriert zu sein...",[{
-					label: "Close",
-					className: "primary",
-					callback: () => {
-						// Close the popup when the "Close" button is pressed.
-						closePopup();
-						
-					}
-				}]);						
-			}
-		}]);
-    })
-    WA.room.area.onLeave('tim_cinema').subscribe(closePopup)
-	
-	//Popup Tim Hifi
-	WA.room.area.onEnter('tim_hifi').subscribe(() => {
-        currentPopup = WA.ui.openPopup("Popup_tim_hifi","🐶💬📲",[{
-			label: "Next",
-			className: "primary",
-			callback: () => {
-				// Close the popup when the "Close" button is pressed.
-				closePopup();
-				currentPopup = WA.ui.openPopup("Popup_tim_hifi","Ich verstehe ihn einfach nicht, aber ich habe das Gefühl, als ob er mir den TI-Messenger zeigen möchte...",[{
-					label: "Close",
-					className: "primary",
-					callback: () => {
-						// Close the popup when the "Close" button is pressed.
-						closePopup();
-						
-					}
-				}]);						
-			}
-		}]);
-    })
-    WA.room.area.onLeave('tim_hifi').subscribe(closePopup)
-	
-	//Popup Tim Bus
-	WA.room.area.onEnter('tim_bus').subscribe(() => {
-        currentPopup = WA.ui.openPopup("Popup_tim_bus","Wir sollten schnellstmöglich zur Kommunikationsanlage fahren...",[]);
-    })
-    WA.room.area.onLeave('tim_bus').subscribe(closePopup)
-	
 
-
+	
 	function closePopup(){
 		if (currentPopup !== undefined) {
 			currentPopup.close();
 			currentPopup = undefined;
 		}
 	}
-
 	
 
 
