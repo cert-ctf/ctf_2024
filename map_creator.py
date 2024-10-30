@@ -57,7 +57,7 @@ for i in range(1,map_count+1):
     modified_data_map_spaceship = file_map_spaceship.replace("map_flat.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_flat")
     modified_data_map_spaceship = modified_data_map_spaceship.replace("map_moon.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_moon")
 
-    modified_data_map_moon = file_map_moon.replace("map_moon.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_spaceship")
+    modified_data_map_moon = file_map_moon.replace("map_moon.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_moon")
 
     #Schreibe neue Datei
     write_map(output_folder+"/"+input_file_map_flat.replace(".tmj","")+"_"+str(i).zfill(2)+".tmj",modified_map_flat)
