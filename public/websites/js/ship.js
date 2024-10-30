@@ -230,27 +230,32 @@ const commands = {
             return 'Befehl 100003 erfolgreich überschrieben. Autopilot aktiviert.';
         } else if (befehl === "history") {
             return commandsFile.join('\n'); // Return the current status of commands
-        } else if (befehl === "start" && autopilot === false) {            
+        } else if (befehl === "start" && autopilot === false) {        
+            startStarfield();     
             return "Systeme werden neu gestartet.\n"+
                     "100024 starting\n"+
                     "       status: started\n"+
-                    "100003 set autopilot active',
+                    "100003 set autopilot active\n"+
                     "100026 navigation: set course to moon\n"+
                     "       navigation: course accepted\n"+
                     "100028 movement: forward\n"+
                     "100029 velocity: 5\n"+
                     "100030 communication: active\n"+
-                    "100031 estimated time: 1847"; 
+                    "100031 estimated time: "+decrypt("6392"); 
 
-                    '100001 set movement: forward',
-                    '100002 set velocity: 5',
-                    '100003 set autopilot active',
-                    '100004 set communication: active',
-                    '100005 set navigation: course to moon',    
-                    '100020 set velocity: 0, stop',
-                    '100021 set status: stop'
-
-                    startStarfield();       
+                    function decrypt(input) {
+        return input.replace(/[a-zA-Z0-9]/g, function(char) {
+            if (char >= 'a' && char <= 'z') {
+                return String.fromCharCode((char.charCodeAt(0) - 97 + 13) % 26 + 97);
+            } else if (char >= 'A' && char <= 'Z') {
+                return String.fromCharCode((char.charCodeAt(0) - 65 + 13) % 26 + 65);
+            } else if (char >= '0' && char <= '9') {
+                return String.fromCharCode((char.charCodeAt(0) - 48 + 5) % 10 + 48);
+            }
+            return char;
+        });
+    }
+                          
         } else if (befehl === "start" && autopilot === true) {                    
             return LogFile.join('\n');            
         } else if (befehl === "stop") {                    
@@ -261,6 +266,20 @@ const commands = {
         }
     },
 };
+
+
+function decrypt(input) {
+    return input.replace(/[a-zA-Z0-9]/g, function(char) {
+        if (char >= 'a' && char <= 'z') {
+            return String.fromCharCode((char.charCodeAt(0) - 97 + 13) % 26 + 97);
+        } else if (char >= 'A' && char <= 'Z') {
+            return String.fromCharCode((char.charCodeAt(0) - 65 + 13) % 26 + 65);
+        } else if (char >= '0' && char <= '9') {
+            return String.fromCharCode((char.charCodeAt(0) - 48 + 5) % 10 + 48);
+        }
+        return char;
+    });
+}
 
 function getCurrentFormattedTime() {
     const now = new Date();
