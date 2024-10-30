@@ -47,6 +47,7 @@ if not os.path.exists(output_folder):
 for i in range(1,map_count+1):
     #Ersetze Strings in Maps
     modified_map_flat = file_map_flat.replace("map_city.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_city")
+    modified_map_flat = file_map_flat.replace("map_city.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_spaceship")
 
     modified_data_map_city = file_map_city.replace("map_radar.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_radar")
     modified_data_map_city = modified_data_map_city.replace("map_flat.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_flat")
@@ -55,6 +56,11 @@ for i in range(1,map_count+1):
     modified_data_map_radar = modified_data_map_radar.replace("map_city.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_city")
 
     modified_data_map_radar_inside = file_map_radar_inside.replace("map_radar.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_radar")
+
+    modified_data_map_spaceship = file_map_spaceship.replace("map_flat.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_flat")
+    modified_data_map_spaceship = file_map_spaceship.replace("map_moon.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_moon")
+
+    modified_data_map_moon = file_map_spaceship.replace("map_moon.tmj", "https://play.workadventu.re/@/gematik/tim_ti/team_"+str(i).zfill(2)+"_spaceship")
 
     #Schreibe neue Datei
     write_map(output_folder+"/"+input_file_map_flat.replace(".tmj","")+"_"+str(i).zfill(2)+".tmj",modified_map_flat)
