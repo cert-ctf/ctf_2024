@@ -68,6 +68,9 @@ for i in range(1,map_count+1):
     write_map(output_folder+"/"+input_file_map_radar.replace(".tmj","")+"_"+str(i).zfill(2)+".tmj",modified_data_map_radar)
     write_map(output_folder+"/"+input_file_map_radar_inside.replace(".tmj","")+"_"+str(i).zfill(2)+".tmj",modified_data_map_radar_inside)
 
+    write_map(output_folder+"/"+input_file_map_spaceship.replace(".tmj","")+"_"+str(i).zfill(2)+".tmj",modified_data_map_spaceship)
+    write_map(output_folder+"/"+input_file_map_moon.replace(".tmj","")+"_"+str(i).zfill(2)+".tmj",modified_data_map_moon)
+
 exit()
 
 
