@@ -1974,6 +1974,33 @@
                  "width":192.833,
                  "x":1152,
                  "y":928
+                }, 
+                {
+                 "height":448,
+                 "id":36,
+                 "name":"futurama",
+                 "properties":[
+                        {
+                         "name":"audioLoop",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"audioVolume",
+                         "type":"string",
+                         "value":"0.5"
+                        }, 
+                        {
+                         "name":"playAudio",
+                         "type":"string",
+                         "value":"futurama.mp3"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":512,
+                 "x":992,
+                 "y":736
                 }],
          "opacity":1,
          "properties":[
@@ -1988,7 +2015,7 @@
          "y":0
         }],
  "nextlayerid":150,
- "nextobjectid":36,
+ "nextobjectid":37,
  "orientation":"orthogonal",
  "properties":[
         {
