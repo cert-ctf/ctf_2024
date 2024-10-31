@@ -165,6 +165,36 @@ WA.onInit().then(() => {
 	});
 	WA.room.area.onLeave('area_praxis').subscribe(closePopup)
 
+	// Popup Spaceship
+	WA.room.area.onEnter('area_spaceship_1').subscribe(() => {
+		console.log("!")
+		currentPopup = WA.ui.openPopup("popup_spaceship_1", "Wilkommen auf unserem Schiff.", [{
+			label: "Next",
+			className: "primary",
+			callback: () => {
+				// Close the popup when the "Close" button is pressed.
+				closePopup();
+				currentPopup = WA.ui.openPopup("popup_spaceship_1", "Du willst zum Mond? Hmm, das wird schwierig...", [{
+					label: "Next",
+					className: "primary",
+					callback: () => {
+						// Close the popup when the "Close" button is pressed.
+						closePopup();
+						currentPopup = WA.ui.openPopup("popup_spaceship_1", "Unsere KI steuert sämtliche Systeme...", [{
+							label: "Close",
+							className: "primary",
+							callback: () => {
+								// Close the popup when the "Close" button is pressed.
+								closePopup();								
+							}
+						}]);
+					}
+				}]);
+			}
+		}]);
+	});
+	WA.room.area.onLeave('area_spaceship_1').subscribe(closePopup)
+
 	//Popup VirtualCare
 	WA.room.area.onEnter('area_virtualcare').subscribe(() => {
         currentPopup = WA.ui.openPopup("popup_virtualcare_1","Praxis geschlossen: Urlaub",[]);			
