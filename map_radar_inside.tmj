@@ -718,21 +718,21 @@
                  "y":267.934650568956
                 }, 
                 {
-                 "height":64,
+                 "height":96,
                  "id":35,
-                 "name":"aufgabe_1",
+                 "name":"welcome",
                  "properties":[
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"websites\/sxop01desd.html"
+                         "value":"websites\/sxop000desd.html"
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":88.7272727272727,
-                 "x":319.818181818182,
-                 "y":320
+                 "width":128,
+                 "x":1056,
+                 "y":352
                 }, 
                 {
                  "height":95.6666666666667,
@@ -772,6 +772,23 @@
                  "width":192.833,
                  "x":913.5835,
                  "y":270.8335
+                }, 
+                {
+                 "height":64,
+                 "id":40,
+                 "name":"aufgabe_1",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":"websites\/sxop01desd.html"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":88.7273,
+                 "x":319.818,
+                 "y":288
                 }],
          "opacity":1,
          "properties":[
@@ -786,7 +803,7 @@
          "y":0
         }],
  "nextlayerid":77,
- "nextobjectid":40,
+ "nextobjectid":41,
  "orientation":"orthogonal",
  "properties":[
         {
