@@ -1952,6 +1952,28 @@
                  "width":127.818154545454,
                  "x":1184.63637727273,
                  "y":866.9091
+                }, 
+                {
+                 "height":124,
+                 "id":34,
+                 "name":"area_spaceship_1",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":140,
+                 "x":1184,
+                 "y":988.832
+                }, 
+                {
+                 "height":70.6667,
+                 "id":35,
+                 "name":"popup_spaceship_1",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":192.833,
+                 "x":1152,
+                 "y":928
                 }],
          "opacity":1,
          "properties":[
@@ -1966,7 +1988,7 @@
          "y":0
         }],
  "nextlayerid":150,
- "nextobjectid":34,
+ "nextobjectid":36,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1995,7 +2017,7 @@
          "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.10.2",
+ "tiledversion":"1.11.0",
  "tileheight":32,
  "tilesets":[
         {
