@@ -22,8 +22,8 @@ function generateOutput(command) {
             return '0 "VIRTUAL DISK"     00  2A\n1 "OPENDOOR.PRG"      PRG\nREADY.\n';
         case 'LOAD"OPENDOOR",8':
             return 'SEARCHING FOR OPENDOOR\nLOADING\nREADY.\n';
-            case 'LOAD"OPENDOOR.PRG",8':
-                return 'SEARCHING FOR OPENDOOR\nLOADING\nREADY.\n';
+        case 'LOAD"OPENDOOR.PRG",8':
+            return 'SEARCHING FOR OPENDOOR\nLOADING\nREADY.\n';
         case 'RUN':
             return 'RUNNING OPENDOOR\nDER CODE IST: '+decrypt(crypt)+'\nREADY.\n';
         default:
