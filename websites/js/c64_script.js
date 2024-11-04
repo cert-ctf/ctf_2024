@@ -20,9 +20,8 @@ function generateOutput(command) {
             return 'SEARCHING FOR $\nLOADING\nREADY.\n';
         case 'LIST':
             return '0 "VIRTUAL DISK"     00  2A\n1 "OPENDOOR.PRG"      PRG\nREADY.\n';
-        case 'LOAD"OPENDOOR",8':
-            return 'SEARCHING FOR OPENDOOR\nLOADING\nREADY.\n';
         case 'LOAD"OPENDOOR.PRG",8':
+        case 'LOAD"OPENDOOR",8':
             return 'SEARCHING FOR OPENDOOR\nLOADING\nREADY.\n';
         case 'RUN':
             return 'RUNNING OPENDOOR\nDER CODE IST: '+decrypt(crypt)+'\nREADY.\n';
@@ -30,8 +29,6 @@ function generateOutput(command) {
             return '';
     }
 }
-
-
 
 document.getElementById('userInput').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') {
@@ -45,8 +42,11 @@ document.getElementById('userInput').addEventListener('keydown', function(e) {
         // Entferne Leerzeichen aus dem aktuellen erwarteten Befehl für den Vergleich
         const expectedCommand = normalizeCommand(commandSequence[currentCommandIndex]);
 
-        // Überprüfe, ob der eingegebene Befehl gültig ist (egal ob er schon eingegeben wurde)
-        if (input === expectedCommand || acceptedCommands.includes(input)) {
+        // Erlaube sowohl 'LOAD "OPENDOOR",8' als auch 'LOAD "OPENDOOR.PRG",8'
+        if ((input === expectedCommand) || 
+            (input === 'LOAD"OPENDOOR.PRG",8' && expectedCommand === 'LOAD"OPENDOOR",8') ||
+            acceptedCommands.includes(input)) {
+
             // Generiere und füge den passenden Output basierend auf dem Befehl hinzu
             newOutput += generateOutput(input);
 
@@ -56,7 +56,7 @@ document.getElementById('userInput').addEventListener('keydown', function(e) {
             }
 
             // Bewege zur nächsten erwarteten Befehlsposition, aber nur, wenn es der aktuelle erwartete Befehl war
-            if (input === expectedCommand) {
+            if (input === expectedCommand || (input === 'LOAD"OPENDOOR.PRG",8' && expectedCommand === 'LOAD"OPENDOOR",8')) {
                 currentCommandIndex++;
             }
 
@@ -81,8 +81,6 @@ document.getElementById('userInput').addEventListener('keydown', function(e) {
 
         this.value = '';  // Eingabefeld leeren
     }
-
-    
 });
 
 function decrypt(input) {
