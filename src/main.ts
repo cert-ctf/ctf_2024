@@ -112,7 +112,7 @@ WA.onInit().then(() => {
                     callback: () => {
                         // Close the popup when the "Close" button is pressed.
                         closePopup();
-                        currentPopup = WA.ui.openPopup("popup_radar_inside_1", "Wir sollten prüfen was hier vor sich geht...", [{
+                        currentPopup = WA.ui.openPopup("popup_radar_inside_1", "Wir sollten prüfen, was hier los ist...", [{
                             label: "Next",
                             className: "primary",
                             callback: () => {

@@ -96,7 +96,7 @@
                 {
                  "name":"doorVariable",
                  "type":"string",
-                 "value":"Door_2"
+                 "value":"Door_Teleport"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -198,7 +198,7 @@
                 {
                  "name":"doorVariable",
                  "type":"string",
-                 "value":"Door_1"
+                 "value":"Door_Schleuse"
                 }],
          "type":"tilelayer",
          "visible":true,
