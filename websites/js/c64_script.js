@@ -17,14 +17,17 @@ function normalizeCommand(command) {
 function generateOutput(command) {
     switch (command) {
         case 'LOAD"$",8':
+        case 'LOAD"$",8,1':  // Akzeptiert auch LOAD "$",8,1
             return 'SEARCHING FOR $\nLOADING\nREADY.\n';
         case 'LIST':
             return '0 "VIRTUAL DISK"     00  2A\n1 "OPENDOOR.PRG"      PRG\nREADY.\n';
         case 'LOAD"OPENDOOR.PRG",8':
         case 'LOAD"OPENDOOR",8':
+        case 'LOAD"OPENDOOR.PRG",8,1':  // Akzeptiert auch LOAD "OPENDOOR.PRG",8,1
+        case 'LOAD"OPENDOOR",8,1':      // Akzeptiert auch LOAD "OPENDOOR",8,1
             return 'SEARCHING FOR OPENDOOR\nLOADING\nREADY.\n';
         case 'RUN':
-            return 'RUNNING OPENDOOR\nDER CODE IST: '+decrypt(crypt)+'\nREADY.\n';
+            return 'RUNNING OPENDOOR\nDER CODE IST: ' + decrypt(crypt) +'\nREADY.\n';
         default:
             return '';
     }
@@ -42,10 +45,18 @@ document.getElementById('userInput').addEventListener('keydown', function(e) {
         // Entferne Leerzeichen aus dem aktuellen erwarteten Befehl für den Vergleich
         const expectedCommand = normalizeCommand(commandSequence[currentCommandIndex]);
 
-        // Erlaube sowohl 'LOAD "OPENDOOR",8' als auch 'LOAD "OPENDOOR.PRG",8'
+        console.log("");
+        console.log(input);
+        console.log(expectedCommand);
+        // Erlaube sowohl 'LOAD "$",8' als auch 'LOAD "$",8,1' und die üblichen Varianten für "OPENDOOR"
         if ((input === expectedCommand) || 
             (input === 'LOAD"OPENDOOR.PRG",8' && expectedCommand === 'LOAD"OPENDOOR",8') ||
+            (input === 'LOAD"OPENDOOR.PRG",8,1' && expectedCommand === 'LOAD"OPENDOOR",8') ||
+            (input === 'LOAD"OPENDOOR",8,1' && expectedCommand === 'LOAD"OPENDOOR",8') ||
+            (input === 'LOAD"OPENDOOR",8' && expectedCommand === 'LOAD"OPENDOOR",8') ||
+            (input === 'LOAD"$",8,1' && expectedCommand === 'LOAD"$",8') ||
             acceptedCommands.includes(input)) {
+                console.log(input)
 
             // Generiere und füge den passenden Output basierend auf dem Befehl hinzu
             newOutput += generateOutput(input);
@@ -56,7 +67,12 @@ document.getElementById('userInput').addEventListener('keydown', function(e) {
             }
 
             // Bewege zur nächsten erwarteten Befehlsposition, aber nur, wenn es der aktuelle erwartete Befehl war
-            if (input === expectedCommand || (input === 'LOAD"OPENDOOR.PRG",8' && expectedCommand === 'LOAD"OPENDOOR",8')) {
+            if (input === expectedCommand || 
+                (input === 'LOAD"OPENDOOR.PRG",8' && expectedCommand === 'LOAD"OPENDOOR",8') || 
+                (input === 'LOAD"OPENDOOR.PRG",8,1' && expectedCommand === 'LOAD"OPENDOOR",8') || 
+                (input === 'LOAD"OPENDOOR",8' && expectedCommand === 'LOAD"OPENDOOR",8') ||
+                (input === 'LOAD"OPENDOOR",8,1' && expectedCommand === 'LOAD"OPENDOOR",8') ||
+                (input === 'LOAD"$",8,1' && expectedCommand === 'LOAD"$",8')) {
                 currentCommandIndex++;
             }
 
@@ -66,6 +82,7 @@ document.getElementById('userInput').addEventListener('keydown', function(e) {
                 acceptedCommands = [];  // Liste zurücksetzen, da alle Befehle abgearbeitet wurden
             }
         } else {
+            console.log("ERROR")
             // Fehlermeldungen für unerwartete Eingaben
             if (input.startsWith('LOAD') && !input.startsWith('LOAD"$",8') && !input.startsWith('LOAD"OPENDOOR",8')) {
                 newOutput += 'FILE NOT FOUND\nREADY.\n';

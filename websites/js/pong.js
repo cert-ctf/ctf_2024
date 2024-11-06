@@ -176,7 +176,7 @@ document.getElementById('restart').addEventListener('click', function() {
     if (calculateChecksum(check) === checksum) {
         computerSpeed = 0.1;
         playerSpeed = 10;
-        ballSpeed = 3;
+        ballSpeed = 6;
         drawlogo = true;
     }
             
