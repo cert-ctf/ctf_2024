@@ -1513,7 +1513,7 @@
                 {
                  "height":70.6667,
                  "id":47,
-                 "name":"popup_praxis",
+                 "name":"popup_moon_2",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1535,7 +1535,7 @@
                 {
                  "height":70.6667,
                  "id":49,
-                 "name":"popup_praxis",
+                 "name":"popup_moon_3",
                  "rotation":0,
                  "type":"",
                  "visible":true,
