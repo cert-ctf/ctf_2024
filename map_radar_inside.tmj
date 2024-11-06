@@ -160,7 +160,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":21,
          "id":75,
-         "name":"door_code",
+         "name":"door_radarstation_code",
          "opacity":1,
          "properties":[
                 {
@@ -553,7 +553,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":21,
          "id":74,
-         "name":"door_closed",
+         "name":"door_radarstation_closed",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
@@ -683,7 +683,7 @@
                         {
                          "name":"closeLayer",
                          "type":"string",
-                         "value":"door_closed"
+                         "value":"door_radarstation_closed"
                         }, 
                         {
                          "name":"default",
@@ -698,7 +698,7 @@
                         {
                          "name":"label",
                          "type":"string",
-                         "value":"Open the 'Station' door"
+                         "value":"Open the 'Radar Station' door"
                         }, 
                         {
                          "name":"openLayer",
