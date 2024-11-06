@@ -15,13 +15,7 @@ WA.onInit().then(() => {
 
 	
 
-	
-	function closePopup(){
-		if (currentPopup !== undefined) {
-			currentPopup.close();
-			currentPopup = undefined;
-		}
-	}
+
 	
 
 
