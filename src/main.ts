@@ -201,6 +201,47 @@ WA.onInit().then(() => {
     })
     WA.room.area.onLeave('area_virtualcare').subscribe(closePopup)
 
+	//Wohnung
+	WA.room.area.onEnter('area_flat_1').subscribe(() => {
+		console.log("!")
+		currentPopup = WA.ui.openPopup("popup_flat_1", "Hier hat alles begonnen. Zum Glück konnten wir die Übertragung der Patientendaten stoppen.", [{
+			label: "Next",
+			className: "primary",
+			callback: () => {
+				// Close the popup when the "Next" button is pressed.
+				closePopup();
+				// Open the second popup
+				currentPopup = WA.ui.openPopup("popup_flat_1", "Das Paket ist angekommen, jetzt müssen wir nur noch den Teleporter finden.", [{
+					label: "Close",
+					className: "primary",
+					callback: () => {
+						// Close the popup when the "Close" button is pressed.
+						closePopup();
+					}
+				}]);
+			}
+		}]);
+	});
+	WA.room.area.onLeave('area_flat_1').subscribe(closePopup);
+
+	//Popup Moon 1 
+	WA.room.area.onEnter('area_moon_1').subscribe(() => {
+        currentPopup = WA.ui.openPopup("popup_moon_1","Lustig, soll uns das abschrecken?",[]);			
+    })
+    WA.room.area.onLeave('area_moon_1').subscribe(closePopup)
+
+	//Popup Moon 2
+	WA.room.area.onEnter('area_moon_2').subscribe(() => {
+        currentPopup = WA.ui.openPopup("popup_moon_2","The enemy of my enemy is my friend.",[]);			
+    })
+    WA.room.area.onLeave('area_moon_2').subscribe(closePopup)
+
+	//Popup Moon 3
+	WA.room.area.onEnter('area_moon_3').subscribe(() => {
+        currentPopup = WA.ui.openPopup("popup_moon_3","Die Bilder vom Rover werden sicher für Aufregung sorgen.",[]);			
+    })
+    WA.room.area.onLeave('area_moon_3').subscribe(closePopup)
+
 	
 	//Popup People 
 	WA.room.area.onEnter('people_info_01').subscribe(() => {

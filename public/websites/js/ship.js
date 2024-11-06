@@ -5,9 +5,14 @@ Willkommen zum Benutzerhandbuch der Warner Acme Raumschiff-KI. Diese fortschritt
 
 Manchmal kann die KI etwas eigensinnig und zickig reagieren, was gelegentlich zu unerwarteten Herausforderungen führt.
 
-1. Prüfen Sie den Befehlsatz Log im command_center
-2. Nutzen Sie den override-Befehl, um den Autopilot zu deaktivieren.
-3. Aktivieren Sie die Systeme erneut, um die Ansteuerung zu ermöglichen.`;
+1. Prüfen Sie den Befehlsatz Log im command_center nach aufgetretenen Fehlern.
+2. Prüfen sie zusätzlich den aktuellen Status über das KI-Steuerungsprogramm.
+3. Finden Sie den Befehlsatz, der die KI steuert.
+4. Nutzen Sie den override-Befehl, um die betroffene KI-Einheit zu deaktivieren.
+5. Aktivieren Sie die Systeme erneut, um die Ansteuerung zu ermöglichen.
+
+VERSION:
+- K1-KL1M4-v0.2.3, K1-C0MMUN1C4T0R-v4.3.7, K1-40T0P1L0T-v1.9.9`;
 
 const commandHints = {
     command: ['override', 'status', 'start', 'stop'],
@@ -15,13 +20,14 @@ const commandHints = {
 
 let currentDir = '/home/spaceship';
 let commandsFile = [
-    '100001 movement: forward',
-    '100002 velocity: 5',
-    '100003 autopilot active',
-    '100004 communication: active',
-    '100005 navigation: course to moon',    
-    '100020 velocity: 0, stop',
-    '100021 status: stop'
+    'code      info           status',
+    '100001    movement:      forward',
+    '100002    velocity:      5',
+    '100003    autopilot      active',
+    '100004    communication: active',
+    '100005    navigation:    course to moon',    
+    '100020    velocity:      0, stop',
+    '100021    status:        stop'
 ];
 let LogFile = [
     '2024-11-15 10:00:00 - Manöver: <i>Vorwärts</i>',
@@ -200,7 +206,7 @@ const commands = {
             // Show command help if no command is provided
             return "Verfügbare Unterbefehle für 'command':\n"+
                   " - command override [code] [true/false]\n"+
-                  " - command history\n"+
+                  " - command status\n"+
                   " - command start\n"+ 
                   " - command stop";
         }
@@ -210,9 +216,9 @@ const commands = {
             commandsFile = commandsFile.map(line => {
                 if (line.startsWith('100003')) {
                     autopilot = false;
-                    commandsFile.push('100003 autopilot: deactive');
+                    commandsFile.push('100003    autopilot      deactive');
                     LogFile.push(getCurrentFormattedTime()+' - Autopilot: <i>deaktiviert<i/>');
-                    return '100003 autopilot: deactive';
+                    return '100003    autopilot      deactive';
                 }
                 return line;
             });
@@ -228,20 +234,21 @@ const commands = {
                 return line;
             });
             return 'Befehl 100003 erfolgreich überschrieben. Autopilot aktiviert.';
-        } else if (befehl === "history") {
+        } else if (befehl === "status") {
             return commandsFile.join('\n'); // Return the current status of commands
         } else if (befehl === "start" && autopilot === false) {        
+            document.getElementById("lnxinput").style.display = "none";
             startStarfield();     
             return "Systeme werden neu gestartet.\n"+
                     "100024 starting\n"+
                     "       status: started\n"+
-                    "100003 set autopilot active\n"+
+                    "100003 set autopilot deactive\n"+
                     "100026 navigation: set course to moon\n"+
                     "       navigation: course accepted\n"+
                     "100028 movement: forward\n"+
                     "100029 velocity: 5\n"+
                     "100030 communication: active\n"+
-                    "100031 estimated time: "+decrypt("6392"); 
+                    "100031 estimated time: <b>"+decrypt("6392")+"</b>"; 
 
                     function decrypt(input) {
         return input.replace(/[a-zA-Z0-9]/g, function(char) {

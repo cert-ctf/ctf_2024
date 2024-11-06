@@ -931,7 +931,7 @@
                  "name":"stuff_inside_1",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":50,
                  "x":0,
                  "y":0
@@ -1417,7 +1417,7 @@
                  "y":741.545481818182
                 }, 
                 {
-                 "height":58.3636,
+                 "height":68.515133333333,
                  "id":40,
                  "name":"aufgabe_09",
                  "properties":[
@@ -1429,8 +1429,8 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":73.818,
-                 "x":1007.42433333333,
+                 "width":96,
+                 "x":992,
                  "y":603.484866666667
                 }, 
                 {
@@ -1476,6 +1476,72 @@
                  "width":620.5,
                  "x":530,
                  "y":289.5
+                }, 
+                {
+                 "height":84.58,
+                 "id":44,
+                 "name":"area_moon_1",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96,
+                 "x":1216,
+                 "y":810.48
+                }, 
+                {
+                 "height":70.6667,
+                 "id":45,
+                 "name":"popup_moon_1",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":224,
+                 "x":1152,
+                 "y":736
+                }, 
+                {
+                 "height":84.58,
+                 "id":46,
+                 "name":"area_moon_2",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96,
+                 "x":1024,
+                 "y":1002.48
+                }, 
+                {
+                 "height":70.6667,
+                 "id":47,
+                 "name":"popup_praxis",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":224,
+                 "x":960,
+                 "y":928
+                }, 
+                {
+                 "height":117.52,
+                 "id":48,
+                 "name":"area_moon_3",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":160,
+                 "x":736,
+                 "y":1066.48
+                }, 
+                {
+                 "height":70.6667,
+                 "id":49,
+                 "name":"popup_praxis",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":224,
+                 "x":704,
+                 "y":992
                 }],
          "opacity":1,
          "properties":[
@@ -1490,7 +1556,7 @@
          "y":0
         }],
  "nextlayerid":159,
- "nextobjectid":44,
+ "nextobjectid":52,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1519,7 +1585,7 @@
          "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.10.2",
+ "tiledversion":"1.11.0",
  "tileheight":32,
  "tilesets":[
         {
@@ -2940,6 +3006,30 @@
                         }]
                 }, 
                 {
+                 "animation":[
+                        {
+                         "duration":400,
+                         "tileid":438
+                        }, 
+                        {
+                         "duration":400,
+                         "tileid":432
+                        }],
+                 "id":438
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":400,
+                         "tileid":442
+                        }, 
+                        {
+                         "duration":400,
+                         "tileid":436
+                        }],
+                 "id":442
+                }, 
+                {
                  "id":451,
                  "properties":[
                         {
@@ -3147,6 +3237,66 @@
                         }]
                 }, 
                 {
+                 "animation":[
+                        {
+                         "duration":400,
+                         "tileid":488
+                        }, 
+                        {
+                         "duration":400,
+                         "tileid":482
+                        }],
+                 "id":488
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":400,
+                         "tileid":489
+                        }, 
+                        {
+                         "duration":400,
+                         "tileid":483
+                        }],
+                 "id":489
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":400,
+                         "tileid":490
+                        }, 
+                        {
+                         "duration":400,
+                         "tileid":484
+                        }],
+                 "id":490
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":400,
+                         "tileid":491
+                        }, 
+                        {
+                         "duration":400,
+                         "tileid":485
+                        }],
+                 "id":491
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":400,
+                         "tileid":492
+                        }, 
+                        {
+                         "duration":400,
+                         "tileid":486
+                        }],
+                 "id":492
+                }, 
+                {
                  "id":503,
                  "properties":[
                         {
@@ -3190,6 +3340,18 @@
                          "type":"bool",
                          "value":true
                         }]
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":400,
+                         "tileid":540
+                        }, 
+                        {
+                         "duration":400,
+                         "tileid":534
+                        }],
+                 "id":540
                 }, 
                 {
                  "id":553,
@@ -3298,7 +3460,8 @@
                          "type":"bool",
                          "value":false
                         }]
-                }, 
+                },
+            
                 {
                  "id":689,
                  "properties":[
@@ -3370,8 +3533,7 @@
                          "type":"bool",
                          "value":false
                         }]
-                },
-            
+                }, 
                 {
                  "id":787,
                  "properties":[
@@ -3749,7 +3911,8 @@
                          "type":"bool",
                          "value":false
                         }]
-                }, 
+                },
+            
                 {
                  "id":940,
                  "properties":[
@@ -3821,8 +3984,7 @@
                          "type":"bool",
                          "value":false
                         }]
-                },
-            
+                }, 
                 {
                  "id":1040,
                  "properties":[

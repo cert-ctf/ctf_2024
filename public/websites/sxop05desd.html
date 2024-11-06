@@ -177,10 +177,68 @@
         }
 
         document.getElementById('submitButton').addEventListener('click', function() {
+			const check_a = 488;
+			const check_b = 780;
+			const check_c = 415;
+			const check_d = 1086;
+
+
+
             const timestamp = document.getElementById('timestamp').value;
             const user = document.getElementById('user').value;
             const password = document.getElementById('password').value;
             const filename = document.getElementById('filename').value;
+
+			if (timestamp != "")
+			{
+				if (calculateChecksum(timestamp) != check_a) {			
+					document.getElementById('timestamp').classList.remove("text-success");
+					document.getElementById('timestamp').classList.add("text-danger");
+				}	
+				else {	
+					document.getElementById('timestamp').classList.remove("text-danger");
+					document.getElementById('timestamp').classList.add("text-success");				
+				
+				}
+			}
+
+			if (user != "")
+			{
+				if (calculateChecksum(user) != check_b) {			
+					document.getElementById('user').classList.remove("text-success");
+					document.getElementById('user').classList.add("text-danger");
+				}	
+				else {	
+					document.getElementById('user').classList.remove("text-danger");
+					document.getElementById('user').classList.add("text-success");				
+				}
+			}
+
+			if (password != "")
+			{
+				if (calculateChecksum(password) != check_c) {			
+					document.getElementById('password').classList.remove("text-success");
+					document.getElementById('password').classList.add("text-danger");
+				}	
+				else {	
+					document.getElementById('password').classList.remove("text-danger");
+					document.getElementById('password').classList.add("text-success");				
+				}
+			}
+
+			if (filename != "")
+			{
+				if (calculateChecksum(filename) != check_d) {			
+					document.getElementById('filename').classList.remove("text-success");
+					document.getElementById('filename').classList.add("text-danger");
+				}	
+				else {	
+					document.getElementById('filename').classList.remove("text-danger");
+					document.getElementById('filename').classList.add("text-success");				
+				}
+			}
+			
+			
 
 			const values = [timestamp, user, password, filename];
             checksum = calculateChecksum(values);
