@@ -96,7 +96,7 @@
                 {
                  "name":"doorVariable",
                  "type":"string",
-                 "value":"Door_Teleport"
+                 "value":"door_teleport"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -198,7 +198,7 @@
                 {
                  "name":"doorVariable",
                  "type":"string",
-                 "value":"Door_Schleuse"
+                 "value":"door_schleuse"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -856,7 +856,7 @@
          "name":"Stars",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":80,
          "x":0,
          "y":0
@@ -947,7 +947,7 @@
          "name":"Ship_Floor_2",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":80,
          "x":0,
          "y":0
@@ -1038,7 +1038,7 @@
          "name":"Ship_Floor_1",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":80,
          "x":0,
          "y":0
@@ -1927,7 +1927,7 @@
                 {
                  "height":0,
                  "id":30,
-                 "name":"Door_Schleuse",
+                 "name":"door_schleuse",
                  "point":true,
                  "properties":[
                         {
@@ -1970,7 +1970,7 @@
                 {
                  "height":0,
                  "id":31,
-                 "name":"Door_Teleport",
+                 "name":"door_teleport",
                  "point":true,
                  "properties":[
                         {
