@@ -16,8 +16,62 @@ const imgWidth = 200; // Breite des Bildes
 const imgHeight = 200; // Höhe des Bildes
 const x = (canvas.width - imgWidth) / 2;
 const y = (canvas.height - imgHeight) / 2;
-
+// Matrix-Effekt Variablen
+const charArr = '01'.split('');
+const fontSize = 10;
+const maxColums = Math.floor(canvas.width / fontSize);
+const fallingCharArr = [];
 let gameLoop;
+
+function Point(x, y) {
+    this.x = x;
+    this.y = y;
+    this.value = charArr[randomInt(0, charArr.length)].toUpperCase();
+    this.speed = randomFloat(1, 5);
+    this.opacity = randomFloat(0.3, 1); // Zufällige Helligkeit
+}
+
+Point.prototype.draw = function(ctx) {
+    ctx.fillStyle = `rgba(0, 255, 0, ${this.opacity})`; // Grün mit variabler Helligkeit
+    ctx.font = fontSize + "px sans-serif";
+    ctx.fillText(this.value, this.x, this.y);
+
+    this.y += this.speed;
+    if (this.y > canvas.height) {
+        this.y = randomFloat(-100, 0);
+        this.speed = randomFloat(2, 5);
+        this.value = charArr[randomInt(0, charArr.length)].toUpperCase();
+        this.opacity = randomFloat(0.3, 1); // Neue Helligkeit
+    }
+}
+
+// Initialisieren der fallenden Zeichen
+for (let i = 0; i < maxColums; i++) {
+    fallingCharArr.push(new Point(i * fontSize, randomFloat(-500, 0)));
+}
+
+// Funktion zum Zeichnen des Matrix-Effekts
+function drawMatrix() {
+    // Sehr leicht transparentes Schwarz, um den Schweif zu erzeugen
+    ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    let i = fallingCharArr.length;
+    while (i--) {
+        fallingCharArr[i].draw(ctx);
+    }
+}
+
+// Hilfsfunktionen
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function randomFloat(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+
 
 function drawRect(x, y, width, height, color) {
     ctx.fillStyle = color;
@@ -121,11 +175,12 @@ function render() {
             ctx.fillStyle = '#212448'; // Setze die Füllfarbe auf Schwarz
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(img, x, y, imgWidth, imgHeight);
+            drawMatrix()
         }else
             drawRect(0, 0, canvas.width, canvas.height, "#000");
 
-    drawRect(player.x, player.y, player.width, player.height, "#fff");
-    drawRect(computer.x, computer.y, computer.width, computer.height, "#fff");
+    drawRect(player.x, player.y, player.width, player.height, "#00FF64");
+    drawRect(computer.x, computer.y, computer.width, computer.height, "red");
     drawCircle(ball.x, ball.y, ball.radius, "#fff");
     drawText(playerScore, 3 * canvas.width / 4, 30);
     drawText(computerScore, canvas.width / 4, 30);
@@ -178,8 +233,16 @@ document.getElementById('restart').addEventListener('click', function() {
         playerSpeed = 10;
         ballSpeed = 6;
         drawlogo = true;
+
+        if (!document.getElementById('seed').classList.contains("text-success")) {
+            document.getElementById('seed').classList.remove("text-danger"); 
+            document.getElementById('seed').classList.add("text-success");   
+        }             
+    }  else {
+            document.getElementById('seed').classList.remove("text-success"); 
+            document.getElementById('seed').classList.add("text-danger");            
     }
-            
+
 
     resetGame(); // Spiel neu starten
 });

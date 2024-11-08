@@ -135,12 +135,14 @@
 				const decodedImage = decodeWithRotation(crypt, numberRotation);
 				
 				if (calculateChecksum(decodedImage) === "255744714") {
+					document.getElementById('keyInput').classList.remove("text-danger");	
 					document.getElementById('keyInput').classList.add("text-success");	
 					document.getElementById("image").src = "data:image/png;base64," + decodedImage;
 					document.getElementById("info_text_field").textContent = 'Interessant, was hat die Fax Flut mit dem Mond zu tun? Wir sollten die Visitenkarte weiter analysieren und mit den Informationen zur Arztpraxis gehen, um unsere Suche fortzusetzen.';
 				} else 	
 				{
 					document.getElementById("image").src = "work/error.png";
+					document.getElementById('keyInput').classList.remove("text-success");	
 					document.getElementById('keyInput').classList.add("text-danger");	
 				}	
 			}
