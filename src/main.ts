@@ -224,6 +224,12 @@ WA.onInit().then(() => {
     });
     WA.room.area.onLeave('area_flat_1').subscribe(closePopup);
 
+	//Popup Cat
+    WA.room.area.onEnter('area_flat_2').subscribe(() => {
+        currentPopup = WA.ui.openPopup("popup_flat_2","Mau, lass mich schlafen...",[]);          
+    })
+    WA.room.area.onLeave('area_flat_2').subscribe(closePopup)
+
     //Popup Moon 1 
     WA.room.area.onEnter('area_moon_1').subscribe(() => {
         currentPopup = WA.ui.openPopup("popup_moon_1","Lustig, soll uns das abschrecken?",[]);          
