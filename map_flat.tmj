@@ -108,7 +108,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"map_city.tmj"
+                 "value":"map_city.tmj#entry_flat"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -630,7 +630,7 @@
                  "name":"mirror_duke",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":true,
+                 "visible":false,
                  "width":30,
                  "x":0,
                  "y":0
@@ -914,6 +914,28 @@
                  "width":192.833,
                  "x":576,
                  "y":320
+                }, 
+                {
+                 "height":96,
+                 "id":48,
+                 "name":"area_flat_3",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":128,
+                 "x":608,
+                 "y":224
+                }, 
+                {
+                 "height":70.6667,
+                 "id":49,
+                 "name":"popup_flat_3",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":192.833,
+                 "x":576,
+                 "y":160
                 }],
          "opacity":1,
          "properties":[
@@ -928,7 +950,7 @@
          "y":0
         }],
  "nextlayerid":90,
- "nextobjectid":48,
+ "nextobjectid":50,
  "orientation":"orthogonal",
  "properties":[
         {

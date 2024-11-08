@@ -230,6 +230,29 @@ WA.onInit().then(() => {
     })
     WA.room.area.onLeave('area_flat_2').subscribe(closePopup)
 
+    //Popup Kitchen
+    WA.room.area.onEnter('area_flat_3').subscribe(() => {
+        console.log("!")
+        currentPopup = WA.ui.openPopup("popup_flat_3", "How do you drive this thing?!", [{
+            label: "Next",
+            className: "primary",
+            callback: () => {
+                // Close the popup when the "Next" button is pressed.
+                closePopup();
+                // Open the second popup
+                currentPopup = WA.ui.openPopup("popup_flat_3", "...come on, let's get this ship started!", [{
+                    label: "Close",
+                    className: "primary",
+                    callback: () => {
+                        // Close the popup when the "Close" button is pressed.
+                        closePopup();
+                    }
+                }]);
+            }
+        }]);
+    });
+    WA.room.area.onLeave('area_flat_3').subscribe(closePopup);
+
     //Popup Moon 1 
     WA.room.area.onEnter('area_moon_1').subscribe(() => {
         currentPopup = WA.ui.openPopup("popup_moon_1","Lustig, soll uns das abschrecken?",[]);          
