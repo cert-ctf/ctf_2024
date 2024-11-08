@@ -1,7 +1,7 @@
 const output = document.getElementById('output');
 const input = document.getElementById('userInput');
 const missionBriefing = `
-Willkommen zum Benutzerhandbuch der Warner Acme Raumschiff-KI. Diese fortschrittliche künstliche Intelligenz wurde entwickelt, um Ihre Reisen durch das Universum sicherer, effizienter und angenehmer zu gestalten. Die Warner Acme KI ist darauf programmiert, die komplexesten Navigations- und Steuerungsvorgänge zu übernehmen, während Sie sich auf Ihre Mission konzentrieren können.
+Willkommen zum Benutzerhandbuch der ACME Raumschiff-KI. Diese fortschrittliche künstliche Intelligenz wurde entwickelt, um Ihre Reisen durch das Universum sicherer, effizienter und angenehmer zu gestalten. Die Warner Acme KI ist darauf programmiert, die komplexesten Navigations- und Steuerungsvorgänge zu übernehmen, während Sie sich auf Ihre Mission konzentrieren können.
 
 Manchmal kann die KI etwas eigensinnig und zickig reagieren, was gelegentlich zu unerwarteten Herausforderungen führt.
 
@@ -22,7 +22,7 @@ let currentDir = '/home/spaceship';
 let commandsFile = [
     'code      info           status',
     '100001    movement:      forward',
-    '100002    velocity:      5',
+    '100002    velocity:      Warp 9.5',
     '100003    autopilot      active',
     '100004    communication: active',
     '100005    navigation:    course to moon',    
@@ -31,7 +31,7 @@ let commandsFile = [
 ];
 let LogFile = [
     '2024-11-15 10:00:00 - Manöver: <i>Vorwärts</i>',
-    '2024-11-15 10:00:01 - Geschwindigkeit: <i>5</i>',
+    '2024-11-15 10:00:01 - Geschwindigkeit: <i>Warp 9.5</i>',
     '2024-11-15 10:00:02 - Autopilot: <i>aktiviert</i>',
     '2024-11-15 10:00:03 - Kommunikation: <i>aktiviert</i>',
     '2024-11-15 10:00:04 - Navigation: <i>Kurs setzen, Ziel: Mond</i>',
@@ -246,7 +246,7 @@ const commands = {
                     "100026 navigation: set course to moon\n"+
                     "       navigation: course accepted\n"+
                     "100028 movement: forward\n"+
-                    "100029 velocity: 5\n"+
+                    "100029 velocity: Warp 9.5\n"+
                     "100030 communication: active\n"+
                     "100031 estimated time: <b>"+decrypt("6392")+"</b>"; 
 
