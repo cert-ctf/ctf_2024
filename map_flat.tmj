@@ -892,6 +892,28 @@
                  "width":192.833,
                  "x":320,
                  "y":288
+                }, 
+                {
+                 "height":96,
+                 "id":46,
+                 "name":"area_flat_2",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":64,
+                 "x":640,
+                 "y":384
+                }, 
+                {
+                 "height":70.6667,
+                 "id":47,
+                 "name":"popup_flat_2",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":192.833,
+                 "x":576,
+                 "y":320
                 }],
          "opacity":1,
          "properties":[
@@ -906,7 +928,7 @@
          "y":0
         }],
  "nextlayerid":90,
- "nextobjectid":46,
+ "nextobjectid":48,
  "orientation":"orthogonal",
  "properties":[
         {
