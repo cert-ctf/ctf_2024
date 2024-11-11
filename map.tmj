@@ -2788,11 +2788,6 @@
                          "value":"admin"
                         }, 
                         {
-                         "name":"jitsiUrl",
-                         "type":"string",
-                         "value":"https:\/\/jitsictf.gematik.de"
-                        }, 
-                        {
                          "name":"openWebsiteClosable",
                          "type":"bool",
                          "value":false
