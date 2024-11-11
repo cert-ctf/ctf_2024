@@ -13,27 +13,6 @@
 
 		<title>Mission (K)IMpossible</title>
 
-		<style>
-			.frame {
-            display: inline-block;
-            border: 5px dashed transparent; /* Standardmäßig transparent */
-			padding: 10px;
-			
-			}
-
-			.blink {
-				animation: blink 1s infinite alternate;
-			}
-
-			@keyframes blink {
-				from {
-					border-color: #212448;
-				}
-				to {
-					border-color: transparent;
-				}
-			}
-		</style>
 	</head>
 	<body>		
 		<main class="container" role="main">
@@ -52,7 +31,7 @@
 				<br>
 				<div class="card" >
 					<div class="card-header" style="text-align: center;">
-						<b>Brückenmoment</b>
+						<b>Garfields Prüfstand</b>
 					</div>
 					<h5 class="card-title" style="text-align: justify "></h5>
 
@@ -65,9 +44,7 @@
 				<div class="card-body" style="text-align: justify ">
 					<p class="card-text">Lass uns gemeinsam prüfen, ob Ihr bisher alle wichtigen Informationen gesammelt habt.</p>
 
-					<div class="frame" id="imageFrame">
-						<img id="cat" src="work/cat_bridge.png" class="img-fluid rounded d-block mx-auto" width="50%" alt="">	
-					</div>
+					<img id="cat" src="work/cat_bridge.png" class="img-fluid rounded d-block mx-auto" width="50%" alt="">	
 					
 					<div class="container d-flex flex-column align-items-center mt-5">
 						<div id="selectionCheckboxes" class="mb-3">
@@ -137,12 +114,6 @@
 
 		<script>
 
-		function activateBlink() {
-            const frame = document.getElementById('imageFrame');
-            frame.style.borderColor = 'red'; // Setze die Rahmenfarbe
-            frame.classList.add('blink'); // Aktiviere die Blink-Animation
-        }
-
 		function verifySelection() {
 			// Alle Checkboxen abfragen
 			const checkboxes = document.querySelectorAll(".selection-checkbox");
@@ -153,9 +124,8 @@
 	
 			// Bild-URL bei Erfolg ändern, wenn alle Bedingungen erfüllt sind
 			if (allChecked && codeCount == 5) {
-				activateBlink();
 				document.getElementById("cat").src = "work/cat_bridge2.png"; 
-				document.getElementById("info_text_field").textContent = "Lass uns die Brücke überqueren und schauen, ob wir im HiFi-Geschäft weitere Spuren finden. Du findest den Code im Bild.";
+				document.getElementById("info_text_field").innerHTML = "Lass uns die Brücke überqueren und schauen, ob wir im HiFi-Geschäft weitere Spuren finden.<br>Du findest den Code im Bild.";
 				
 			} else {
 				document.getElementById("info_text_field").textContent = "Ich denke, wir sind noch nicht bereit, die Spurensuche weiterzuführen.";

@@ -226,7 +226,7 @@ WA.onInit().then(() => {
 
     //Popup PS1 
     WA.room.area.onEnter('area_ps1').subscribe(() => {
-        currentPopup = WA.ui.openPopup("popup_ps1","Live in Your World, Play in Ours)",[]);          
+        currentPopup = WA.ui.openPopup("popup_ps1","Live in Your World, Play in Ours",[]);          
     })
     WA.room.area.onLeave('area_ps1').subscribe(closePopup)
 
