@@ -2778,11 +2778,6 @@
                  "name":"Jitsi_Stage",
                  "properties":[
                         {
-                         "name":"JitsiUrl",
-                         "type":"string",
-                         "value":"https:\/\/coremeet.workadventu.re"
-                        }, 
-                        {
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"stage"
@@ -2791,6 +2786,11 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"admin"
+                        }, 
+                        {
+                         "name":"jitsiUrl",
+                         "type":"string",
+                         "value":"https:\/\/coremeet.workadventu.re"
                         }, 
                         {
                          "name":"openWebsiteClosable",
