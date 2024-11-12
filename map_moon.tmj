@@ -931,7 +931,7 @@
                  "name":"stuff_inside_1",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":true,
+                 "visible":false,
                  "width":50,
                  "x":0,
                  "y":0
@@ -982,7 +982,7 @@
                  "name":"stuff_inside_2",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":true,
+                 "visible":false,
                  "width":50,
                  "x":0,
                  "y":0
@@ -1223,7 +1223,7 @@
                  "name":"above_roof_1",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":50,
                  "x":0,
                  "y":0
@@ -1274,7 +1274,7 @@
                  "name":"above_roof_2",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":50,
                  "x":0,
                  "y":0
