@@ -52,18 +52,19 @@
 
                 <div class="card-body" style="text-align: justify">
                     <p>Der Supercomputer hat uns zu einem ultimativen Duell herausgefordert: Eine Runde Pong! Deine Aufgabe ist es, den Supercomputer in diesem klassischen Spiel zu besiegen. Zeige deine Geschicklichkeit und Reaktionsfähigkeit, um den Sieg zu erringen. Der erste, der drei Punkte erreicht, gewinnt das Spiel</p>
+                    
                     <hr>                        
                 </div>
-				
+				<small class="form-text text-muted text-center"><i>Steuerung: Pfeiltasten hoch/runter, bitte auf das Spielfeld klicken um den Fokus zu erhalten.</i></small>
                 <div class="card-body" style="text-align: justify;">    					
-                    <div id="gameContainer">   
-						<p id="message"></p>                     
-                        <canvas id="pongCanvas" width="800" height="400" ></canvas>
+                    <div id="gameContainer" style="width: 100%; height: auto;">   
+                        <p id="message"></p>                     
+                        <canvas id="pongCanvas" width="800" height="400" style="width: 100%; height: auto;"></canvas>
                         <div style="display: flex; align-items: center; margin-left: 10px;">
-							<input type="text" id="seed" placeholder="Enter seed value" value="" maxlength="5" />
-							<button type="button" class="btn btn-warning" id="restart" style="margin-left: 10px;">Restart</button>
-						</div>
-						<button type="button" class="btn btn-success" id="shutdown" style="display: none;">Shutdown</button>
+                            <input type="text" id="seed" placeholder="Enter seed value" value="" maxlength="5" />
+                            <button type="button" class="btn btn-warning" id="restart" style="margin-left: 10px;">Restart</button>
+                        </div>
+                        <button type="button" class="btn btn-success" id="shutdown" style="display: none;">Shutdown</button>
                     </div>
                 </div>
                 <hr>
