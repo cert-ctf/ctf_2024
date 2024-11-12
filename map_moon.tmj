@@ -931,7 +931,7 @@
                  "name":"stuff_inside_1",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":50,
                  "x":0,
                  "y":0
@@ -982,7 +982,7 @@
                  "name":"stuff_inside_2",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":50,
                  "x":0,
                  "y":0
@@ -1223,7 +1223,7 @@
                  "name":"above_roof_1",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":true,
+                 "visible":false,
                  "width":50,
                  "x":0,
                  "y":0
@@ -1274,7 +1274,7 @@
                  "name":"above_roof_2",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":true,
+                 "visible":false,
                  "width":50,
                  "x":0,
                  "y":0
@@ -2798,6 +2798,94 @@
                         }]
                 }, 
                 {
+                 "animation":[
+                        {
+                         "duration":1200,
+                         "tileid":394
+                        }, 
+                        {
+                         "duration":250,
+                         "tileid":544
+                        }, 
+                        {
+                         "duration":1600,
+                         "tileid":394
+                        }, 
+                        {
+                         "duration":250,
+                         "tileid":544
+                        }],
+                 "id":394
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":1200,
+                         "tileid":395
+                        }, 
+                        {
+                         "duration":250,
+                         "tileid":545
+                        }, 
+                        {
+                         "duration":1600,
+                         "tileid":395
+                        }, 
+                        {
+                         "duration":250,
+                         "tileid":545
+                        }],
+                 "id":395
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":1200,
+                         "tileid":396
+                        }, 
+                        {
+                         "duration":250,
+                         "tileid":546
+                        }, 
+                        {
+                         "duration":1600,
+                         "tileid":396
+                        }, 
+                        {
+                         "duration":250,
+                         "tileid":546
+                        }],
+                 "id":396
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":1000,
+                         "tileid":398
+                        }, 
+                        {
+                         "duration":250,
+                         "tileid":548
+                        }, 
+                        {
+                         "duration":1300,
+                         "tileid":398
+                        }, 
+                        {
+                         "duration":250,
+                         "tileid":548
+                        }, 
+                        {
+                         "duration":600,
+                         "tileid":398
+                        }, 
+                        {
+                         "duration":250,
+                         "tileid":548
+                        }],
+                 "id":398
+                }, 
+                {
                  "id":401,
                  "properties":[
                         {
@@ -2949,7 +3037,8 @@
                          "type":"bool",
                          "value":true
                         }]
-                }, 
+                },
+            
                 {
                  "id":421,
                  "properties":[
@@ -2985,8 +3074,7 @@
                          "type":"bool",
                          "value":true
                         }]
-                },
-            
+                }, 
                 {
                  "id":427,
                  "properties":[
@@ -3028,6 +3116,26 @@
                          "tileid":436
                         }],
                  "id":442
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":1200,
+                         "tileid":444
+                        }, 
+                        {
+                         "duration":250,
+                         "tileid":594
+                        }, 
+                        {
+                         "duration":1600,
+                         "tileid":394
+                        }, 
+                        {
+                         "duration":250,
+                         "tileid":594
+                        }],
+                 "id":444
                 }, 
                 {
                  "id":451,
@@ -3415,7 +3523,8 @@
                          "type":"bool",
                          "value":false
                         }]
-                }, 
+                },
+            
                 {
                  "id":639,
                  "properties":[
@@ -3460,8 +3569,7 @@
                          "type":"bool",
                          "value":false
                         }]
-                },
-            
+                }, 
                 {
                  "id":689,
                  "properties":[
@@ -3866,7 +3974,8 @@
                          "type":"bool",
                          "value":false
                         }]
-                }, 
+                },
+            
                 {
                  "id":896,
                  "properties":[
@@ -3911,8 +4020,7 @@
                          "type":"bool",
                          "value":false
                         }]
-                },
-            
+                }, 
                 {
                  "id":940,
                  "properties":[
