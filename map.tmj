@@ -2016,6 +2016,11 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
+                        }, 
+                        {
+                         "name":"jitsiUrl",
+                         "type":"string",
+                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2038,6 +2043,11 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
+                        }, 
+                        {
+                         "name":"jitsiUrl",
+                         "type":"string",
+                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2071,7 +2081,7 @@
                 {
                  "height":53.0000333333337,
                  "id":129,
-                 "name":"Web_SAP",
+                 "name":"Web_SH",
                  "properties":[
                         {
                          "name":"openTab",
@@ -2359,6 +2369,11 @@
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"coffee"
+                        }, 
+                        {
+                         "name":"jitsiUrl",
+                         "type":"string",
+                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2806,6 +2821,11 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
+                        }, 
+                        {
+                         "name":"jitsiUrl",
+                         "type":"string",
+                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2828,6 +2848,11 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
+                        }, 
+                        {
+                         "name":"jitsiUrl",
+                         "type":"string",
+                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2849,7 +2874,12 @@
                         {
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
-                         "value":"admin"
+                         "value":"speaker"
+                        }, 
+                        {
+                         "name":"jitsiUrl",
+                         "type":"string",
+                         "value":"https:\/\/jitsictf.gematik.de"
                         }, 
                         {
                          "name":"openWebsiteClosable",
@@ -2877,6 +2907,11 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
+                        }, 
+                        {
+                         "name":"jitsiUrl",
+                         "type":"string",
+                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2888,7 +2923,7 @@
                 {
                  "height":267.333,
                  "id":179,
-                 "name":"Jitsi_sap",
+                 "name":"Jitsi_sh",
                  "properties":[
                         {
                          "name":"jitsiRoom",
@@ -2899,6 +2934,11 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
+                        }, 
+                        {
+                         "name":"jitsiUrl",
+                         "type":"string",
+                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2921,6 +2961,11 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
+                        }, 
+                        {
+                         "name":"jitsiUrl",
+                         "type":"string",
+                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
