@@ -1544,26 +1544,9 @@
                  "y":992
                 }, 
                 {
-                 "height":68.5151,
-                 "id":52,
-                 "name":"aufgabe_09",
-                 "properties":[
-                        {
-                         "name":"openWebsite",
-                         "type":"string",
-                         "value":"websites\/sxop09desd.html"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":96,
-                 "x":928,
-                 "y":635.485
-                }, 
-                {
                  "height":64,
                  "id":56,
-                 "name":"aufgabe_09",
+                 "name":"pinky",
                  "properties":[
                         {
                          "name":"openWebsite",
@@ -1580,7 +1563,7 @@
                 {
                  "height":64,
                  "id":57,
-                 "name":"aufgabe_09",
+                 "name":"brain",
                  "properties":[
                         {
                          "name":"openWebsite",

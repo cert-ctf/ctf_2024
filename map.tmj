@@ -2368,7 +2368,7 @@
                  "y":2940.6665
                 }, 
                 {
-                 "height":3070.66666666666,
+                 "height":3614.66666666666,
                  "id":145,
                  "name":"silent",
                  "properties":[
@@ -2380,8 +2380,8 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":2248,
-                 "x":64,
+                 "width":2240,
+                 "x":0,
                  "y":0
                 }, 
                 {
