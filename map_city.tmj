@@ -2886,7 +2886,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"map_radar.tmj"
+                         "value":"map_radar.tmj#entry_city"
                         }],
                  "rotation":0,
                  "type":"area",
