@@ -2016,11 +2016,6 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
-                        }, 
-                        {
-                         "name":"jitsiUrl",
-                         "type":"string",
-                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2043,11 +2038,6 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
-                        }, 
-                        {
-                         "name":"jitsiUrl",
-                         "type":"string",
-                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2369,11 +2359,6 @@
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"coffee"
-                        }, 
-                        {
-                         "name":"jitsiUrl",
-                         "type":"string",
-                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2821,11 +2806,6 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
-                        }, 
-                        {
-                         "name":"jitsiUrl",
-                         "type":"string",
-                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2848,11 +2828,6 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
-                        }, 
-                        {
-                         "name":"jitsiUrl",
-                         "type":"string",
-                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2875,11 +2850,6 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
-                        }, 
-                        {
-                         "name":"jitsiUrl",
-                         "type":"string",
-                         "value":"https:\/\/jitsictf.gematik.de"
                         }, 
                         {
                          "name":"openWebsiteClosable",
@@ -2907,11 +2877,6 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
-                        }, 
-                        {
-                         "name":"jitsiUrl",
-                         "type":"string",
-                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2934,11 +2899,6 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
-                        }, 
-                        {
-                         "name":"jitsiUrl",
-                         "type":"string",
-                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -2961,11 +2921,6 @@
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
                          "value":"speaker"
-                        }, 
-                        {
-                         "name":"jitsiUrl",
-                         "type":"string",
-                         "value":"https:\/\/jitsictf.gematik.de"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3415,7 +3370,7 @@
          "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.0",
+ "tiledversion":"1.11.2",
  "tileheight":32,
  "tilesets":[
         {
